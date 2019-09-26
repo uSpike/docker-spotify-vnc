@@ -2,7 +2,7 @@
 
 Run spotify inside a docker container, with VNC, for use with snapcast.
 
-# Why?
+## Why?
 
 Projects like `librespot` are wonderful, but they are playing a constant game of
 cat and mouse as spotify does not officially support 3rd party libraries.
@@ -14,7 +14,7 @@ and use VNC to configure it.  This allows you to use the client as a "spotify co
 player, similar to what `librespot` provides. The audio is piped to a FIFO which you can then
 consume with snapcast.
 
-# How?
+## How?
 
 Build the container:
 ```shell
@@ -64,8 +64,7 @@ fixuid: runtime GID '1000' already matches container group 'docker' GID
 + export DISPLAY=:99
 + Xvfb :99 -screen 0 1024x768x16
 + [ -e /tmp/snapfifo_pa ]
-+ + echo waiting
-x11vncwaiting
+x11vnc
  -display+  :99sleep -nopw 1 -forever
  -quiet
 + pulseaudio
