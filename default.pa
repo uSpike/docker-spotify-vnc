@@ -1,0 +1,4 @@
+.nofail
+  load-module module-native-protocol-unix
+  load-module module-pipe-sink file=/tmp/snapfifo_pa sink_name=Snapcast rate=48000
+.fail
