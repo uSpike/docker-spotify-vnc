@@ -7,7 +7,7 @@ Run spotify inside a docker container, with VNC, for use with snapcast.
 Projects like `librespot` are wonderful, but they are playing a constant game of
 cat and mouse as spotify does not officially support 3rd party libraries.
 Spotify continues to change their API, and 3rd party projects must reverse
-engineer
+engineer it.
 
 This project allows you to run an official spotify client inside a docker container,
 and use VNC to configure it.  This allows you to use the client as a "spotify connect"
