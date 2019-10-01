@@ -8,7 +8,8 @@ RUN export DEBIAN_FRONTEND=noninteractive TZ=America/Chicago \
 
 RUN curl -sS https://download.spotify.com/debian/pubkey.gpg | apt-key add - \
  && echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list \
- && apt-get update && apt-get install -y spotify-client
+ && apt-get update && apt-get install -y spotify-client \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN USER=docker GROUP=docker HOME=/home/$USER \
  && useradd -u 1000 -m -d $HOME -s /bin/bash $USER \

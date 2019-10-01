@@ -88,3 +88,5 @@ You may now connect via VNC to port 5900 and log-in to spotify.
 I recommend you set a high bit rate and other audio preferences you may have.
 
 Spotify settings will persist inside the `spotify-config` docker volume.
+
+Each time the container is started, spotify will be updated to the latest version.
